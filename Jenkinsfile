@@ -33,7 +33,7 @@ pipeline {
           sh 'export MAVEN_HOME=/var/jenkins_home/bin/apache-maven-3.9.0'
           sh 'export PATH=$JAVA_HOME/bin:$GRADLE_HOME/bin:$MAVEN_HOME/bin:$PATH:/var/jenkins_home/.'
           sh 'chmod +x gradlew'
-          sh 'gradle wrap'
+          sh '/var/jenkins_home/bin/gradle-7.6.1/bin/gradle wrap'
           sh './gradlew clean build'
         }
 

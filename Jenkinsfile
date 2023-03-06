@@ -14,7 +14,7 @@ pipeline {
       }
       steps {
         echo 'Clonning Repository'
-        git(url: 'https://github.com/simscom/testProject.git', branch: 'main', credentialsId: 'testProject2')
+        git(url: 'https://github.com/simscom/testProject.git', branch: 'main', credentialsId: 'testProject')
       }
     }
 

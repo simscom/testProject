@@ -29,7 +29,7 @@ pipeline {
         echo 'Bulid Gradle'
         dir(path: '.') {
           sh 'cd /var/jenkins_home'
-          ch '. .bash_profile'
+          sh '. .bash_profile'
           sh 'chmod +x gradlew'
           sh 'gradle wrap'
           sh './gradlew clean build'

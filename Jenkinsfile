@@ -63,10 +63,10 @@ pipeline {
       steps {
         sh 'echo "Docker Rm Start"'
         sh """
-                        docker stop $dockername
-                        docker rm $dockername
-                        docker rmi -f $repository
-                        """
+                                docker stop $dockername
+                                docker rm $dockername
+                                docker rmi -f $repository
+                                """
       }
     }
 

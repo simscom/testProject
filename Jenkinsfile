@@ -28,8 +28,10 @@ pipeline {
       steps {
         echo 'Bulid Gradle'
         dir(path: '.') {
-          sh 'cd /var/jenkins_home'
-          sh '. .bash_profile'
+          sh 'export JAVA_HOME=/var/jenkins_home/bin/jdk1.8.0_341'
+          sh 'export GRADLE_HOME=/var/jenkins_home/bin/gradle-7.6.1'
+          sh 'export MAVEN_HOME=/var/jenkins_home/bin/apache-maven-3.9.0'
+          sh 'export PATH=$JAVA_HOME/bin:$GRADLE_HOME/bin:$MAVEN_HOME/bin:$PATH:/var/jenkins_home/.'
           sh 'chmod +x gradlew'
           sh 'gradle wrap'
           sh './gradlew clean build'

@@ -14,7 +14,7 @@ pipeline {
       }
       steps {
         echo 'Clonning Repository'
-        git(url: 'http://192.168.56.1:9002/git/snet00/testProject.git', branch: 'master')
+        git(url: 'https://github.com/simscom/testProject.git', branch: 'master')
       }
     }
 
@@ -63,10 +63,10 @@ pipeline {
       steps {
         sh 'echo "Docker Rm Start"'
         sh """
-                                docker stop $dockername
-                                docker rm $dockername
-                                docker rmi -f $repository
-                                """
+                                        docker stop $dockername
+                                        docker rm $dockername
+                                        docker rmi -f $repository
+                                        """
       }
     }
 

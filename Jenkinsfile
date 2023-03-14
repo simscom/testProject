@@ -4,6 +4,8 @@ def DOCKER_IMAGE_TAGS = "testproject"  // 생성하는 Docker image 태그
 def NAMESPACE = "ns-project"
 def VERSION = "${env.BUILD_NUMBER}"
 def DATE = new Date();
+def USERNAME = "simscom"
+def PASSWORD = "kL5WQ2CXvHfhw@6"
   
 podTemplate(label: 'builder',
             containers: [

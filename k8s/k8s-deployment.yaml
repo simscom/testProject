@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testpoject-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testpoject
+  template:
+    metadata:
+      labels:
+        app: testpoject
+    spec:
+      containers:
+        - name: testpoject
+          image: simscom/project-repo:testpoject
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always
+          env:
+            - name: DATE
+              value: 'DATE_STRING'
+      imagePullSecrets:
+        - name: my-secret

@@ -6,7 +6,7 @@ spec:
   ports:
     - name: "8080"
       port: 8082
-      nodePort: 308080
+      nodePort: 38080
       targetPort: 8080
   selector:
     app: testpoject
